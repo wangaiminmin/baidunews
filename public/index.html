@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>我的日记本</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO页面关键词 -->
+    <meta name="keywords" content="your keywords">
+    <meta name="description" content="your description">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <style>
+    .diary {
+        width: 500px;
+        margin: 80px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="panel panel-default diary">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+				我的日记本
+			</h3>
+        </div>
+        <div class="panel-body">
+            <!--<form>-->
+                 <div class="form-inline">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="题目" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="emotion">Emotion</label>
+                        <select name="" id="emotion" class="form-control">
+                            <option value="高兴">高兴</option>
+                            <option value="喜悦">喜悦</option>
+                            <option value="一般">一般</option>
+                            <option value="沮丧">沮丧</option>
+                            <option value="失落">失落</option>
+                        </select>
+                    </div>
+                    <button id="submit" class="btn btn-primary pull-right">添加日记</button>
+                </div>
+                <div class="form-group">
+                    <label for="content">日记</label>
+                    <textarea class="form-control" id="content" cols="30" rows="5"></textarea>
+                </div>
+            <!--</form>-->
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>日期</th>
+                        <th>心情</th>
+                        <th>查看</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 模态框 -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">${content.date}日记--心情：${content.emotion}--天气：${content.weather}</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+
+
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>
